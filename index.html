@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TravelExplorer | Discover Your Next Journey</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="#" class="logo">
+                <i class="fa-solid fa-compass"></i>
+                Travel<span>Explorer</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" type="button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#packages">Packages</a>
+                <a href="#booking">Book Now</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="container hero-content">
+
+                <p class="hero-tag">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Explore. Experience. Remember.
+                </p>
+
+                <h1>
+                    Discover Places
+                    <span>Worth Visiting</span>
+                </h1>
+
+                <p class="hero-description">
+                    Find beautiful destinations, explore exciting travel
+                    packages and plan your next unforgettable journey.
+                </p>
+
+                <!-- Search Box -->
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search destinations..."
+                        aria-label="Search destinations"
+                    >
+
+                    <button id="searchButton" type="button">
+                        Search
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DESTINATIONS ================= -->
+
+        <section class="destinations section" id="destinations">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="section-label">EXPLORE</p>
+
+                        <h2>
+                            Popular Destinations
+                        </h2>
+                    </div>
+
+                    <p class="section-description">
+                        Explore amazing places and choose the destination
+                        that matches your travel style.
+                    </p>
+
+                </div>
+
+
+                <!-- Filters -->
+
+                <div class="filters">
+
+                    <div class="filter-group">
+
+                        <label for="countryFilter">
+                            Country
+                        </label>
+
+                        <select id="countryFilter">
+
+                            <option value="all">
+                                All Countries
+                            </option>
+
+                            <option value="india">
+                                India
+                            </option>
+
+                            <option value="france">
+                                France
+                            </option>
+
+                            <option value="italy">
+                                Italy
+                            </option>
+
+                            <option value="japan">
+                                Japan
+                            </option>
+
+                            <option value="switzerland">
+                                Switzerland
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label for="categoryFilter">
+                            Category
+                        </label>
+
+                        <select id="categoryFilter">
+
+                            <option value="all">
+                                All Categories
+                            </option>
+
+                            <option value="beach">
+                                Beach
+                            </option>
+
+                            <option value="mountain">
+                                Mountain
+                            </option>
+
+                            <option value="culture">
+                                Culture
+                            </option>
+
+                            <option value="adventure">
+                                Adventure
+                            </option>
+
+                            <option value="city">
+                                City
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        class="reset-btn"
+                        id="resetFilters"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Reset
+                    </button>
+
+                </div>
+
+
+                <!-- Destination Cards -->
+
+                <div class="destination-grid" id="destinationGrid">
+
+                    <!-- Card 1 -->
+
+                    <article
+                        class="destination-card"
+                        data-country="india"
+                        data-category="culture"
+                        data-name="jaipur india"
+                    >
+
+                        <div class="card-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=900&q=80"
+                                alt="Jaipur city palace"
+                            >
+
+                            <span class="card-badge">
+                                Culture
+                            </span>
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                                aria-label="Add Jaipur to favorites"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Jaipur, India
+                            </div>
+
+                            <h3>Royal Jaipur</h3>
+
+                            <p>
+                                Discover magnificent palaces, colorful
+                                markets and the royal heritage of Rajasthan.
+                            </p>
+
+                            <div class="card-bottom">
+
+                                <strong>
+                                    ₹18,999
+                                </strong>
+
+                                <button
+                                    class="details-btn"
+                                    type="button"
+                                    data-destination="jaipur"
+                                >
+                                    View Details
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Card 2 -->
+
+                    <article
+                        class="destination-card"
+                        data-country="france"
+                        data-category="city"
+                        data-name="paris france"
+                    >
+
+                        <div class="card-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80"
+                                alt="Paris Eiffel Tower"
+                            >
+
+                            <span class="card-badge">
+                                City
+                            </span>
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                                aria-label="Add Paris to favorites"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Paris, France
+                            </div>
+
+                            <h3>Magical Paris</h3>
+
+                            <p>
+                                Experience iconic landmarks, beautiful
+                                streets, art and unforgettable French cuisine.
+                            </p>
+
+                            <div class="card-bottom">
+
+                                <strong>
+                                    ₹74,999
+                                </strong>
+
+                                <button
+                                    class="details-btn"
+                                    type="button"
+                                    data-destination="paris"
+                                >
+                                    View Details
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Card 3 -->
+
+                    <article
+                        class="destination-card"
+                        data-country="italy"
+                        data-category="culture"
+                        data-name="rome italy"
+                    >
+
+                        <div class="card-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=900&q=80"
+                                alt="Rome Italy"
+                            >
+
+                            <span class="card-badge">
+                                Culture
+                            </span>
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                                aria-label="Add Rome to favorites"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Rome, Italy
+                            </div>
+
+                            <h3>Historic Rome</h3>
+
+                            <p>
+                                Walk through ancient history and discover
+                                iconic architecture and Italian culture.
+                            </p>
+
+                            <div class="card-bottom">
+
+                                <strong>
+                                    ₹69,999
+                                </strong>
+
+                                <button
+                                    class="details-btn"
+                                    type="button"
+                                    data-destination="rome"
+                                >
+                                    View Details
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Card 4 -->
+
+                    <article
+                        class="destination-card"
+                        data-country="japan"
+                        data-category="culture"
+                        data-name="kyoto japan"
+                    >
+
+                        <div class="card-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=80"
+                                alt="Kyoto Japan"
+                            >
+
+                            <span class="card-badge">
+                                Culture
+                            </span>
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                                aria-label="Add Kyoto to favorites"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Kyoto, Japan
+                            </div>
+
+                            <h3>Peaceful Kyoto</h3>
+
+                            <p>
+                                Explore ancient temples, peaceful gardens
+                                and traditional Japanese culture.
+                            </p>
+
+                            <div class="card-bottom">
+
+                                <strong>
+                                    ₹89,999
+                                </strong>
+
+                                <button
+                                    class="details-btn"
+                                    type="button"
+                                    data-destination="kyoto"
+                                >
+                                    View Details
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Card 5 -->
+
+                    <article
+                        class="destination-card"
+                        data-country="switzerland"
+                        data-category="mountain"
+                        data-name="swiss alps switzerland"
+                    >
+
+                        <div class="card-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=900&q=80"
+                                alt="Swiss Alps"
+                            >
+
+                            <span class="card-badge">
+                                Mountain
+                            </span>
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                                aria-label="Add Swiss Alps to favorites"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Swiss Alps, Switzerland
+                            </div>
+
+                            <h3>Swiss Alps</h3>
+
+                            <p>
+                                Enjoy breathtaking mountain views, scenic
+                                villages and unforgettable alpine adventures.
+                            </p>
+
+                            <div class="card-bottom">
+
+                                <strong>
+                                    ₹1,19,999
+                                </strong>
+
+                                <button
+                                    class="details-btn"
+                                    type="button"
+                                    data-destination="switzerland"
+                                >
+                                    View Details
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Card 6 -->
+
+                    <article
+                        class="destination-card"
+                        data-country="india"
+                        data-category="beach"
+                        data-name="goa india"
+                    >
+
+                        <div class="card-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80"
+                                alt="Goa beach"
+                            >
+
+                            <span class="card-badge">
+                                Beach
+                            </span>
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                                aria-label="Add Goa to favorites"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Goa, India
+                            </div>
+
+                            <h3>Sunny Goa</h3>
+
+                            <p>
+                                Relax on beautiful beaches, enjoy local food
+                                and experience Goa's vibrant atmosphere.
+                            </p>
+
+                            <div class="card-bottom">
+
+                                <strong>
+                                    ₹14,999
+                                </strong>
+
+                                <button
+                                    class="details-btn"
+                                    type="button"
+                                    data-destination="goa"
+                                >
+                                    View Details
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- No Results -->
+
+                <div
+                    class="no-results"
+                    id="noResults"
+                    hidden
+                >
+                    <i class="fa-solid fa-map-location-dot"></i>
+
+                    <h3>No destinations found</h3>
+
+                    <p>
+                        Try another destination or change your filters.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PACKAGE DETAILS ================= -->
+
+        <section class="packages section" id="packages">
+
+            <div class="container">
+
+                <div class="section-heading center-heading">
+
+                    <p class="section-label">
+                        TRAVEL PACKAGES
+                    </p>
+
+                    <h2>
+                        Choose Your Experience
+                    </h2>
+
+                    <p class="section-description">
+                        Flexible packages designed for different travel
+                        styles and budgets.
+                    </p>
+
+                </div>
+
+
+                <div class="package-grid">
+
+                    <div class="package-card">
+
+                        <div class="package-icon">
+                            <i class="fa-solid fa-suitcase"></i>
+                        </div>
+
+                        <h3>Explorer</h3>
+
+                        <p class="package-price">
+                            ₹24,999
+                            <span>/ person</span>
+                        </p>
+
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                4 Days / 3 Nights
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                3-Star Hotel
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Daily Breakfast
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                City Tour
+                            </li>
+                        </ul>
+
+                        <button
+                            class="package-btn"
+                            type="button"
+                            data-package="Explorer"
+                        >
+                            Select Package
+                        </button>
+
+                    </div>
+
+
+                    <div class="package-card featured-package">
+
+                        <span class="popular-label">
+                            Most Popular
+                        </span>
+
+                        <div class="package-icon">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <h3>Adventurer</h3>
+
+                        <p class="package-price">
+                            ₹49,999
+                            <span>/ person</span>
+                        </p>
+
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                7 Days / 6 Nights
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                4-Star Hotel
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Breakfast & Dinner
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Guided Activities
+                            </li>
+                        </ul>
+
+                        <button
+                            class="package-btn"
+                            type="button"
+                            data-package="Adventurer"
+                        >
+                            Select Package
+                        </button>
+
+                    </div>
+
+
+                    <div class="package-card">
+
+                        <div class="package-icon">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+
+                        <h3>Luxury</h3>
+
+                        <p class="package-price">
+                            ₹89,999
+                            <span>/ person</span>
+                        </p>
+
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                10 Days / 9 Nights
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                5-Star Hotel
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                All Meals Included
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Private Guide
+                            </li>
+                        </ul>
+
+                        <button
+                            class="package-btn"
+                            type="button"
+                            data-package="Luxury"
+                        >
+                            Select Package
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BOOKING ================= -->
+
+        <section class="booking section" id="booking">
+
+            <div class="container booking-container">
+
+                <div class="booking-info">
+
+                    <p class="section-label">
+                        PLAN YOUR TRIP
+                    </p>
+
+                    <h2>
+                        Ready for Your
+                        <span>Next Adventure?</span>
+                    </h2>
+
+                    <p>
+                        Fill out the form and our travel team will help
+                        you plan an unforgettable journey.
+                    </p>
+
+                    <div class="booking-benefits">
+
+                        <div>
+                            <i class="fa-solid fa-shield-heart"></i>
+
+                            <div>
+                                <h4>Secure Booking</h4>
+                                <p>Your booking information is protected.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-headset"></i>
+
+                            <div>
+                                <h4>Travel Support</h4>
+                                <p>Get assistance throughout your journey.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-wallet"></i>
+
+                            <div>
+                                <h4>Flexible Packages</h4>
+                                <p>Choose a package that fits your budget.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Booking Form -->
+
+                <form
+                    class="booking-form"
+                    id="bookingForm"
+                >
+
+                    <h3>
+                        Book Your Journey
+                    </h3>
+
+                    <p>
+                        Tell us about your travel plans.
+                    </p>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="fullName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="Enter your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="destinationSelect">
+                                Destination
+                            </label>
+
+                            <select
+                                id="destinationSelect"
+                                name="destination"
+                                required
+                            >
+
+                                <option value="">
+                                    Select destination
+                                </option>
+
+                                <option value="Jaipur">
+                                    Jaipur, India
+                                </option>
+
+                                <option value="Goa">
+                                    Goa, India
+                                </option>
+
+                                <option value="Paris">
+                                    Paris, France
+                                </option>
+
+                                <option value="Rome">
+                                    Rome, Italy
+                                </option>
+
+                                <option value="Kyoto">
+                                    Kyoto, Japan
+                                </option>
+
+                                <option value="Swiss Alps">
+                                    Swiss Alps, Switzerland
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="packageSelect">
+                                Package
+                            </label>
+
+                            <select
+                                id="packageSelect"
+                                name="package"
+                                required
+                            >
+
+                                <option value="">
+                                    Select package
+                                </option>
+
+                                <option value="Explorer">
+                                    Explorer
+                                </option>
+
+                                <option value="Adventurer">
+                                    Adventurer
+                                </option>
+
+                                <option value="Luxury">
+                                    Luxury
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="travelDate">
+                                Travel Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="travelDate"
+                                name="travelDate"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="travelers">
+                                Travelers
+                            </label>
+
+                            <select
+                                id="travelers"
+                                name="travelers"
+                                required
+                            >
+
+                                <option value="1">
+                                    1 Traveler
+                                </option>
+
+                                <option value="2">
+                                    2 Travelers
+                                </option>
+
+                                <option value="3">
+                                    3 Travelers
+                                </option>
+
+                                <option value="4">
+                                    4 Travelers
+                                </option>
+
+                                <option value="5+">
+                                    5+ Travelers
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Special Requests
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            placeholder="Tell us anything we should know..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        class="submit-btn"
+                        type="submit"
+                    >
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Submit Booking Request
+                    </button>
+
+                    <p
+                        class="form-message"
+                        id="formMessage"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-compass"></i>
+                    Travel<span>Explorer</span>
+                </a>
+
+                <p>
+                    Discover beautiful places and create memories
+                    that last a lifetime.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Quick Links</h4>
+
+                <a href="#home">Home</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#packages">Packages</a>
+                <a href="#booking">Book Now</a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h4>Connect</h4>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    hello@travelexplorer.com
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 98765 43210
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 TravelExplorer. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= DESTINATION MODAL ================= -->
+
+    <div
+        class="modal"
+        id="destinationModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-overlay" id="modalOverlay"></div>
+
+        <div
+            class="modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modalTitle"
+        >
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                type="button"
+                aria-label="Close details"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-image">
+                <img
+                    id="modalImage"
+                    src=""
+                    alt=""
+                >
+            </div>
+
+            <div class="modal-body">
+
+                <p class="section-label" id="modalCategory">
+                    DESTINATION
+                </p>
+
+                <h2 id="modalTitle">
+                    Destination
+                </h2>
+
+                <p
+                    class="modal-location"
+                    id="modalLocation"
+                ></p>
+
+                <p
+                    class="modal-description"
+                    id="modalDescription"
+                ></p>
+
+                <div class="modal-details">
+
+                    <div>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span id="modalDuration"></span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-wallet"></i>
+                        <span id="modalPrice"></span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        <span id="modalRating"></span>
+                    </div>
+
+                </div>
+
+                <button
+                    class="submit-btn modal-book-btn"
+                    id="modalBookButton"
+                    type="button"
+                >
+                    Book This Destination
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
